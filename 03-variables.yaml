@@ -1,0 +1,27 @@
+
+- name: variables in ansible 
+  hosts: mongodb
+  vars:
+    COURSE: JAVA
+    TRAINER: SAPPA
+    DURATION: 110HRS
+  tasks:
+  - name: Devops with AWS
+    ansible.builtin.debug:
+      msg: "Hello I am learning AWS With Devops Course"
+  - name: print variables
+    ansible.builtin.debug:
+      msg: "Hello, I am Learning Detgails {{COURSE}}, and {{TRAINER}}, and {{DURATION}}"
+
+- name: This is for testing
+  hosts: mongodb
+  vars:
+    COURSE: ABCD
+    TYPE: abcd
+    DURATION: 123
+  tasks:
+  - name: Devops
+    ansible.builtin.debug:
+      msg: "Hello I am learning"
+  - name: Print variables
+      msg: "Hi ra {{COURSE}}"

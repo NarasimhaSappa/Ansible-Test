@@ -1,4 +1,4 @@
-- name: variables from files
+  name: variables from files
   hosts: localhost # managing the ansible server itself
 
   vars-files:
